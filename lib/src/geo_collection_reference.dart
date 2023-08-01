@@ -323,7 +323,7 @@ class GeoCollectionReference<T> {
       query = queryBuilder(query)!;
     }
     return query
-        .orderBy('$field.$geohashField')
+        .orderBy('geohash')
         .startAt([geohash]).endAt(['$geohash$_rangeQueryEndAtCharacter']);
   }
 
